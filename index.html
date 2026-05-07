@@ -18,6 +18,10 @@
           <p class="logo2">Furniture Studio</p>
         </div>
 
+        <div class="hamburger" id="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
         <div class="menu" id="nav-menu">
           <ul>
             <li><a href="#">Beranda</a></li>
@@ -191,7 +195,7 @@
               id="pesan-anda"
               placeholder="Pesan Anda"
             ></textarea>
-            <button class="submit">Kirim Pesan</button>
+            <button type="submit" class="submit">Kirim Pesan</button>
           </div>
           <div class="location-section">
             <div class="map-card">
@@ -259,5 +263,31 @@
         /></a>
       </div>
     </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        // Toggle class 'active' pada menu
+        navMenu.classList.toggle("active");
+
+        // Opsional: Ubah ikon bars menjadi 'X' saat diklik
+        const icon = hamburger.querySelector("i");
+        if (navMenu.classList.contains("active")) {
+          icon.classList.replace("fa-bars", "fa-xmark");
+        } else {
+          icon.classList.replace("fa-xmark", "fa-bars");
+        }
+      });
+
+      // Menutup menu saat salah satu link diklik (agar tidak menutupi layar)
+      document.querySelectorAll(".menu ul li a").forEach((n) =>
+        n.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          hamburger.querySelector("i").classList.replace("fa-xmark", "fa-bars");
+        }),
+      );
+    </script>
   </body>
 </html>
