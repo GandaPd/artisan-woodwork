@@ -12,6 +12,11 @@ body {
   color: #f4f4f4;
 }
 
+section {
+  scroll-margin-top: 80px;
+  padding: 50px;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -24,6 +29,13 @@ header {
   align-items: center;
   padding: 15px 50px;
   background: linear-gradient(to bottom, rgb(0 0 0 / 0.9), rgb(0 0 0 / 0.1));
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #bc9355;
+  cursor: pointer;
 }
 
 .navbar .logo {
@@ -239,10 +251,16 @@ h2 {
   justify-content: center;
   border-radius: 5px;
   padding-bottom: 20px;
+  overflow: hidden;
 }
 
 .list-produk-unggulan img {
   max-width: 100%;
+  transition: 0.3s;
+}
+
+.list-produk-unggulan img:hover {
+  transform: scale(1.1);
 }
 
 .list-produk-unggulan h3 {
@@ -329,7 +347,7 @@ blockquote .pekerjaan {
 .contact {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: repeat (4, auto);
+  grid-template-rows: repeat(4, auto);
   gap: 20px;
   max-width: 600px;
   padding: 0 30px;
@@ -548,4 +566,64 @@ footer {
 .medsos img {
   width: 30px;
   height: 30px;
+}
+
+/* Perbaikan Fleksibilitas */
+
+@media (max-width: 992px) {
+  section {
+    padding: 25px;
+  }
+
+  .menu {
+    display: none;
+  } /* Sembunyikan menu atau buat hamburger menu */
+
+  .list-keunggulan {
+    grid-template-columns: 1fr; /* Jadi 1 kolom di tablet/HP */
+    gap: 30px;
+  }
+
+  .item-hubungi-kami {
+    grid-template-columns: 1fr; /* Form, Map, Info jadi bertumpuk */
+    gap: 40px;
+  }
+
+  .list-keunggulan .pengerjaan-manual {
+    border: none; /* Hapus border samping saat jadi 1 kolom */
+    padding: 20px 0;
+    border-top: 1px solid rgb(188 147 85 / 0.1);
+    border-bottom: 1px solid rgb(188 147 85 / 0.1);
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 13px;
+  }
+
+  .hero-section h1 {
+    font-size: 36px; /* Mengecilkan judul di HP */
+  }
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .location-section {
+    width: 100%; /* Jangan pakai 430px statis */
+    padding: 0;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
 }
