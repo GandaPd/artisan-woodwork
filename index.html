@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artisan Woodwork</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -129,8 +133,121 @@
           </blockquote>
         </div>
       </section>
+
+      <section class="hubungi-kami">
+        <div class="container-h2">
+          <div class="title">
+            <h2>Hubungi Kami</h2>
+          </div>
+        </div>
+
+        <div class="item-hubungi-kami">
+          <div class="contact">
+            <div class="item-icon">
+              <i class="fa-solid fa-location-dot"> </i>
+            </div>
+            <div class="item-text">
+              <p class="judul">Alamat Bengkel</p>
+              <p class="isi">
+                Jl. Industri Kayu No. 45, Jepara, Jawa Tengah, Indonesia
+              </p>
+            </div>
+            <div class="item-icon">
+              <i class="fa-solid fa-phone"> </i>
+            </div>
+            <div class="item-text">
+              <p class="judul">Telepon / WhatsApp</p>
+              <p class="isi">+62 812 3456 7890</p>
+            </div>
+            <div class="item-icon">
+              <i class="fa-solid fa-envelope"> </i>
+            </div>
+            <div class="item-text">
+              <p class="judul">Email</p>
+              <p class="isi">info@woodcraft.studio</p>
+            </div>
+            <div class="item-icon">
+              <i class="fa-regular fa-clock"> </i>
+            </div>
+            <div class="item-text">
+              <p class="judul">Jam Operasional</p>
+              <p class="isi">Senin - Sabtu : 08.00 -</p>
+            </div>
+          </div>
+
+          <div class="form">
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              placeholder="Nama Lengkap"
+              required
+            />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="tel" id="whatsapp" placeholder="No. WhatsApp" />
+            <textarea
+              name="pesan-anda"
+              id="pesan-anda"
+              placeholder="Pesan Anda"
+            ></textarea>
+            <button class="submit">Kirim Pesan</button>
+          </div>
+          <div class="location-section">
+            <div class="map-card">
+              <!-- MAP ASLI -->
+              <iframe
+                src="https://www.google.com/maps/place/0%C2%B026'13.9%22N+101%C2%B023'58.3%22E/@0.43718,101.3969431,17z/data=!3m1!4b1!4m4!3m3!8m2!3d0.43718!4d101.399518?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+
+              <!-- OVERLAY -->
+              <div class="map-overlay"></div>
+
+              <!-- PIN -->
+              <div class="pin">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/place/0%C2%B026'13.9%22N+101%C2%B023'58.3%22E/@0.43718,101.3969431,17z/data=!3m1!4b1!4m4!3m3!8m2!3d0.43718!4d101.399518?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"
+              class="map-btn"
+              target="_blank"
+            >
+              Lihat di Google Maps ↗
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="logo-footer">
+        <p class="logo1-footer">Woodcraft</p>
+        <p class="logo2-footer">Furniture Studio</p>
+      </div>
+      <div class="footer-text">
+        <p>&copy; 2024 Woodcraft Furniture Studio. All rights reserved.</p>
+      </div>
+      <div class="medsos">
+        <a
+          href="https://www.facebook.com/gandaprawira.dinata.5/"
+          target="_blank"
+          ><img src="img/facebook.png" alt="Facebook"
+        /></a>
+        <a href="https://www.instagram.com/ganda_prawiradinata/" target="_blank"
+          ><img src="img/instagram.png" alt="Instagram"
+        /></a>
+        <a href="https://wa.me/6285265605782" target="_blank"
+          ><img src="img/whatsapp.png" alt="WhatsApp"
+        /></a>
+      </div>
+    </footer>
   </body>
 </html>
